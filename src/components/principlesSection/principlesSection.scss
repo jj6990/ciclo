@@ -1,0 +1,119 @@
+.section {
+  position: absolute;
+  left: 0px;
+  top: 80%;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(#8ed4dd 0%, #8ad2dc 100%);
+  padding: 100px 0px;
+  &-container {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    &-title {
+      @include font($font: $fontH1, $color: $white, $textPos: $cen);
+      font-weight: 400;
+      height: 50px;
+    }
+    &-cards {
+      margin-top: 50px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 3fr 3fr 3fr;
+      grid-gap: 3rem;
+
+      .card {
+        border-radius: 10px;
+        background: $white;
+        height: auto;
+        width: 100%;
+        box-shadow: $shadow;
+        z-index: 0;
+        position: relative;
+
+        &-inner {
+          background: linear-gradient(#ffffff30 0%, #8e8e8e61 100%);
+          z-index: 1;
+          height: 100%;
+          width: 100%;
+          position: relative;
+          border-radius: 10px;
+          margin: auto;
+          display: grid;
+
+          .container-img {
+            width: 100%;
+
+            .img {
+              margin: auto;
+              display: grid;
+              padding: 3rem;
+              width: 70%;
+            }
+          }
+          .description {
+            p {
+              @include font($font: $fontH3, $color: $dark, $textPos: $cen);
+              font-weight: 600;
+            }
+          }
+          .container-button {
+            width: 100%;
+            .link {
+              @include font($font: $fontP, $color: $dark, $textPos: $cen);
+              margin: 40px auto;
+              display: grid;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .section {
+    &-container {
+      &-title {
+        @include font($font: $fontH1, $color: $white, $textPos: $cen);
+      }
+      &-cards {
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        width: 80%;
+        margin: 70px auto;
+
+        .card {
+          margin: auto;
+          width: 80%;
+          &-inner {
+            margin: auto;
+            .container-img {
+              margin: auto;
+              .img {
+                margin: auto;
+                width: 35%;
+              }
+            }
+            .description {
+              p {
+                @include font($font: $fontH3, $color: $dark, $textPos: $cen);
+                font-weight: 600;
+              }
+            }
+            .container-button {
+              .link {
+                @include font($font: $fontP, $color: $dark, $textPos: $cen);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    top: 830px;
+  }
+}

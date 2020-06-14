@@ -1,0 +1,19 @@
+//Font
+$fontNav: 0.8rem "Montserrat", sans-serif;
+$fontTitle: 1rem "Montserrat", sans-serif;
+$fontH1: 3rem "Montserrat", sans-serif;
+$fontH1r: 2rem "Montserrat", sans-serif;
+$fontH2: 2rem "Montserrat", sans-serif;
+$fontH3: 1rem "Montserrat", sans-serif;
+$fontP: 0.8rem "Montserrat", sans-serif;
+
+//Aligment
+$cen: center;
+$le: left;
+$ri: right;
+
+@mixin font($font, $textPos, $color) {
+  font: $font;
+  color: $color;
+  text-align: $textPos;
+}
