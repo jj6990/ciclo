@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ciclo EC`,
+    title: `Utopía`,
     description: `Circular Economy Blog`,
     author: `Juan Terneus - Develup.tech`,
   },
@@ -58,7 +58,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/ciclo-logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/drop-logo.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-fontawesome-css`,
@@ -73,4 +73,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
