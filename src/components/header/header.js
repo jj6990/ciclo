@@ -1,52 +1,43 @@
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
-import React, { useState, Fragment } from 'react';
-import Img from 'gatsby-image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import { TimelineMax, Power4 } from 'gsap/all';
+import utopiaLogo from '../../images/utopia-logo.svg';
+import dropLogoBlue from '../../images/drop-logo-blue.svg';
 
 const Header = ({ siteTitle }) => {
   return (
     <Fragment>
-      <Helmet>
-        <link
-          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'
-          rel='stylesheet'
-        />
-      </Helmet>
-      <header className='header'>
-        <div className='brand-cont'>
-          <h1 className='site-title'>
-            <Link to='/'>{siteTitle}</Link>
-          </h1>
-          <Link to='/'>
-            <FontAwesomeIcon className='icon' icon={faInstagram} />
-          </Link>
-          <Link to='/'>
-            <FontAwesomeIcon className='icon' icon={faFacebook} />
-          </Link>
-          <Link to='/'>
-            <FontAwesomeIcon className='icon' icon={faTwitter} />
-          </Link>
+      <div className='menu-container'>
+        <div className='menu-container-inner'>
+          <nav className='menu-container-inner-nav'>
+            <div className='nav-logo'>
+              <div className='nav-logo-inner'>
+                <Link className='nav-logo-inner-link' to='/'>
+                  <img
+                    className='nav-logo-inner-link-img'
+                    atl='UtopíaLogo'
+                    src={utopiaLogo}
+                  />
+                </Link>
+              </div>
+            </div>
+            <div className='nav-middle-line'>
+              <div className='nav-middle-line-inner'></div>
+            </div>
+            <div className='nav-menu-container'>
+              <div className='nav-menu-container-dropLogo'>
+                <img
+                  alt='utopiaDropLogo'
+                  className='nav-menu-container-dropLogo-img'
+                  src={dropLogoBlue}
+                />
+              </div>
+            </div>
+          </nav>
         </div>
-      </header>
+      </div>
     </Fragment>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;
