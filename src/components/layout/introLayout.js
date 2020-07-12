@@ -13,9 +13,7 @@ const IntroLayout = ({ children }) => {
     </>
   );
 };
-
 IntroLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
 export default IntroLayout;

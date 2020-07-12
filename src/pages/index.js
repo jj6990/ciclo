@@ -1,5 +1,5 @@
 import React from 'react';
-import IntroLayout from '../components/layout/introLayout';
+import IntroLayout from '../components/layout/IntroLayout';
 import SEO from '../components/seo';
 
 const IndexPage = () => {

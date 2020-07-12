@@ -179,7 +179,7 @@ const IntroMenu = () => {
 
             <Link
               className='intro-container-dropLogo-inner'
-              to='/historia'
+              to='/Historia'
               ref={(el) => (dropInner = el)}
             >
               <img
@@ -205,7 +205,7 @@ const IntroMenu = () => {
                 <li className='menu-container-list-item'>
                   <Link
                     className='link'
-                    to='/economiaCircular'
+                    to='/EconomiaCircular'
                     ref={(el) => (ec = el)}
                   >
                     Economía Circular
@@ -214,7 +214,7 @@ const IntroMenu = () => {
                 <li className='menu-container-list-item'>
                   <Link
                     className='link'
-                    to='/principios'
+                    to='/Principios'
                     ref={(el) => (pr = el)}
                   >
                     3 Principios
@@ -223,7 +223,7 @@ const IntroMenu = () => {
                 <li className='menu-container-list-item'>
                   <Link
                     className='link'
-                    to='/bloquesDeCambio'
+                    to='/BloquesDeCambio'
                     ref={(el) => (bl = el)}
                   >
                     Bloques de Cambio
