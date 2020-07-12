@@ -1,0 +1,15 @@
+//Font
+
+$fontH1: 1rem 'Open Sans', sans-serif;
+$fontH: 0.5rem 'Open Sans', sans-serif;
+
+//Aligment
+$cen: center;
+$le: left;
+$ri: right;
+
+@mixin font($font, $textPos, $color) {
+  font: $font;
+  color: $color;
+  text-align: $textPos;
+}
