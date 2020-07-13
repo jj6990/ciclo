@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { TimelineMax, Power4 } from 'gsap/all';
 import utopiaLogo from '../../images/utopia-logo.svg';
 import dropLogo from '../../images/drop-logo.svg';
-import IntroImg from './introImg';
+import IntroImg from './IntroImg';
 
 const IntroMenu = () => {
   let drop = useRef(null);
