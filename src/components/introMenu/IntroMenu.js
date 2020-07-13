@@ -5,6 +5,8 @@ import utopiaLogo from '../../images/utopia-logo.svg';
 import dropLogo from '../../images/drop-logo.svg';
 import IntroImg from './IntroImg';
 
+gsap.registerPlugin(TimelineMax, Power4);
+
 const IntroMenu = () => {
   let drop = useRef(null);
   let dropInner = useRef(null);
