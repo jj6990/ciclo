@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IntroMenu from '../introMenu/introMenu';
+import IntroMenu from '../introMenu/IntroMenu';
 
 import '../app.css';
 
