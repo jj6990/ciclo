@@ -3,7 +3,10 @@ import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { TimelineMax, Power4 } from 'gsap/all';
 import utopiaLogo from '../../images/utopia-logo.svg';
+import dropLogoBlack from '../../images/drop-logo-black.svg';
 import dropLogoBlue from '../../images/drop-logo-blue.svg';
+import dropLogoRed from '../../images/drop-logo-red.svg';
+import dropLogoGreen from '../../images/drop-logo-green.svg';
 
 gsap.registerPlugin(TimelineMax);
 
@@ -22,12 +25,14 @@ const Header = () => {
     }, []);
     return width;
   };
+
   const [newWidth] = useWindowWidth();
+  console.log(newWidth);
 
   const navHandler = () => {
-    menuTl.fromTo(
+    menuTl.to(
       '.responsive-nav',
-      { opacity: 0, height: 0 },
+
       {
         display: 'grid',
         opacity: 1,
@@ -42,7 +47,7 @@ const Header = () => {
   };
 
   const togglerMenu = () => {
-    menuTl.reversed() ? menuTl.play() : menuTl.reverse();
+    menuTl.reversed() ? menuTl.play() : menuTl.reverse(-1);
   };
 
   return (
@@ -62,7 +67,7 @@ const Header = () => {
               </div>
             </div>
             <div className='nav-middle-line'>
-              <div className='nav-middle-line-inner'></div>
+              <div className='black'></div>
             </div>
             <div
               className={
@@ -93,13 +98,12 @@ const Header = () => {
                 <div className='space'></div>
               </ul>
             </div>
-
             <div className='nav-menu-button' onClick={navHandler}>
               <div className='nav-menu-button-dropLogo'>
                 <img
                   alt='utopiaDropLogo'
                   className='nav-menu-button-dropLogo-img'
-                  src={dropLogoBlue}
+                  src={dropLogoBlack}
                 />
               </div>
             </div>

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { TimelineMax, Power4 } from 'gsap/all';
 import utopiaLogo from '../../images/utopia-logo.svg';
-import dropLogo from '../../images/drop-logo.svg';
+import dropLogo from '../../images/drop-logo-intro.svg';
 import IntroImg from './IntroImg';
 
 gsap.registerPlugin(TimelineMax, Power4);

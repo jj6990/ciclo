@@ -20,9 +20,29 @@
         }
       }
       .nav-middle-line {
-        &-inner {
+        .black {
+          background-color: $dark;
           width: 100%;
+          height: 5px;
+          border-radius: 2px;
+        }
+        .green {
+          background-color: $pColor;
+          width: 100%;
+          height: 5px;
+          border-radius: 2px;
+        }
+
+        .blue {
           background-color: $sColor;
+          width: 100%;
+          height: 5px;
+          border-radius: 2px;
+        }
+
+        .red {
+          background-color: $tColor;
+          width: 100%;
           height: 5px;
           border-radius: 2px;
         }
@@ -99,13 +119,16 @@
             grid-template-columns: 1.5fr;
             z-index: 3;
             padding: 0.5rem;
-            @include font($font: $fontNav, $textPos: $cen, $color: $dark);
+
             .item {
+              @include font($font: $fontNav, $textPos: $cen, $color: $dark);
               padding: 0.5rem;
             }
             .item:hover {
               background-color: $dark;
-              color: $white;
+              a {
+                color: $white !important;
+              }
             }
           }
         }
