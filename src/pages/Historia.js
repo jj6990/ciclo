@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 const Historia = () => {
   return (
     <Layout>
-      <SEO title='Home' />
+      <SEO title='Historia' />
     </Layout>
   );
 };

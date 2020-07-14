@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 const Blog = () => {
   return (
     <Layout>
-      <SEO title='Home' />
+      <SEO title='Blog' />
     </Layout>
   );
 };

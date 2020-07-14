@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 const BloquesDeCambio = () => {
   return (
     <Layout>
-      <SEO title='Home' />
+      <SEO title='Bloques de Cambio' />
     </Layout>
   );
 };

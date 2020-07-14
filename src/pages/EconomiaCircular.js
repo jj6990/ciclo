@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 const EconomiaCircular = () => {
   return (
     <Layout>
-      <SEO title='Home' />
+      <SEO title='Economía Circular' />
     </Layout>
   );
 };

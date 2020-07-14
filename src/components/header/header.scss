@@ -3,7 +3,8 @@
   &-inner {
     &-nav {
       display: grid;
-      grid-template-columns: 1fr 6fr 1fr;
+      grid-template-columns: 1fr 3fr 3fr 1fr;
+      grid-template-rows: 1fr;
       width: 100%;
       align-items: center;
       .nav-logo {
@@ -23,18 +24,43 @@
           width: 100%;
           background-color: $sColor;
           height: 5px;
-          border-radius: 5px;
+          border-radius: 2px;
         }
       }
       .nav-menu-container {
+        background: $bcolor;
+        position: relative;
+        box-shadow: $shadow;
+        border-radius: 3px;
+        padding: 1rem 0;
+        grid-area: 1/3/1/6;
+        top: -20px;
+        align-content: center;
+        display: grid;
+        max-width: 800px;
+
+        &-list {
+          display: grid;
+          grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr 1fr;
+          @include font($font: $fontNav, $textPos: $cen, $color: $dark);
+        }
+      }
+      .responsive-nav {
+        display: none;
+      }
+      .nav-menu-button {
         justify-content: center;
         display: grid;
+        grid-column-start: -1;
+        grid-row-start: 1;
+
         &-dropLogo {
+          z-index: 2;
           background: $bcolor;
           width: 100%;
-          min-width: 130px;
+          min-width: 100px;
           height: 100%;
-          min-height: 130px;
+          min-height: 100px;
           display: grid;
           justify-content: center;
           align-items: center;
@@ -46,6 +72,57 @@
             width: 75%;
             margin: auto;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu-container {
+    &-inner {
+      &-nav {
+        grid-template-columns: 1fr 6fr 1fr;
+
+        .nav-menu-container {
+          display: none;
+        }
+        .responsive-nav {
+          grid-area: 2/2/2/3;
+          max-width: 100%;
+          background: $bcolor;
+          position: relative;
+          box-shadow: $shadow;
+
+          &-list {
+            display: grid;
+            grid-template-columns: 1.5fr;
+            z-index: 3;
+            padding: 0.5rem;
+            @include font($font: $fontNav, $textPos: $cen, $color: $dark);
+            .item {
+              padding: 0.5rem;
+            }
+            .item:hover {
+              background-color: $dark;
+              color: $white;
+            }
+          }
+        }
+        .nav-menu-button {
+          grid-column-start: 3;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .menu-container {
+    &-inner {
+      &-nav {
+        .responsive-nav {
+          grid-area: 2/1/2/6;
         }
       }
     }

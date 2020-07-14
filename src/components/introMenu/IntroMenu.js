@@ -21,9 +21,9 @@ const IntroMenu = () => {
   let pr = useRef(null);
   let bl = useRef(null);
 
-  const tl = new TimelineMax({ paused: true });
-  const tl2 = new TimelineMax({ paused: true, reversed: true });
-  const tl3 = new TimelineMax({ paused: true, reversed: true });
+  const tl = new TimelineMax({ paused: false });
+  const tl2 = new TimelineMax({ paused: false, reversed: true });
+  const tl3 = new TimelineMax({ paused: false, reversed: true });
 
   useEffect(() => {
     tl.to(

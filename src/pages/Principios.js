@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 const Principios = () => {
   return (
     <Layout>
-      <SEO title='Home' />
+      <SEO title='Principios' />
     </Layout>
   );
 };
