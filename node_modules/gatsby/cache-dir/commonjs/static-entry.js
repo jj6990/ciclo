@@ -44,7 +44,7 @@ const {
 
 const apiRunner = require(`./api-runner-ssr`);
 
-const syncRequires = require(`./sync-requires`);
+const syncRequires = require(`$virtual/sync-requires`);
 
 const {
   version: gatsbyVersion
@@ -412,17 +412,30 @@ var _default = (pagePath, callback) => {
     dangerouslySetInnerHTML: {
       __html: scriptChunkMapping
     }
-  })); // Filter out prefetched bundles as adding them as a script tag
+  }));
+  let bodyScripts = [];
+
+  if (chunkMapping[`polyfill`]) {
+    chunkMapping[`polyfill`].forEach(script => {
+      const scriptPath = `${__PATH_PREFIX__}${script}`;
+      bodyScripts.push( /*#__PURE__*/React.createElement("script", {
+        key: scriptPath,
+        src: scriptPath,
+        noModule: true
+      }));
+    });
+  } // Filter out prefetched bundles as adding them as a script tag
   // would force high priority fetching.
 
-  const bodyScripts = scripts.filter(s => s.rel !== `prefetch`).map(s => {
+
+  bodyScripts = bodyScripts.concat(scripts.filter(s => s.rel !== `prefetch`).map(s => {
     const scriptPath = `${__PATH_PREFIX__}/${JSON.stringify(s.name).slice(1, -1)}`;
     return /*#__PURE__*/React.createElement("script", {
       key: scriptPath,
       src: scriptPath,
       async: true
     });
-  });
+  }));
   postBodyComponents.push(...bodyScripts);
   apiRunner(`onPreRenderHTML`, {
     getHeadComponents,
