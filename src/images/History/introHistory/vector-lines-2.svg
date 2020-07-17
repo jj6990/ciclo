@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="56" viewBox="0 0 54 56">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 77 78">
+      <image width="77" height="78" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAABOCAYAAABlnZseAAABpUlEQVR4nO3boUoEURyF8W/XZYIGx2AQxKCmEcFmFyyGTQbBZNM3MPoyNpPBoGBek8FqFIvJYlBEYdmB61hmTpn/hfM9wbm/dMO9RK4syxPgDpgPPTRQa8An8APcG659x8C34bpnODHDiaVwt0CR5Sl6KIW7Nlz7DCdmODHDiRlO7HSGZriOnRlOy3BihhMznJjhxAwnlg3cPrAcYEddeLjxYDD4Ap4M17494GM2znAdMpyY4cQMJ2Y4sSZcGWhbNnAPwGKATXWGEzOcmOHEUrgrYC7QtmzgLqPBHSRPqQzXobHhtAwnZjixyHDnDbhQhYcriuImwJZ/RYY7nF56q6raAibAZoBRdZHhpj3Oxr0Yrn3bwJvhumc4McOJGU7McGKGE2vCrQfalg3cM7AaYFOd4cQMJ2Y4sRRuEu1rYy5w4f6E7gDvhuveruG0DCeWC9xFgD1/igx3NBqNwj6FjwwXOsOJGU7McGKGEzOcmOHEDCdmODHDiRlOzHBihhMznFgTbiXLU/RQChftT2joDCdmOLEp3HA4fAU2sjxBTy0BC2HXAb9YoVnjg113swAAAABJRU5ErkJggg=="/>
+    </pattern>
+  </defs>
+  <rect id="Vector_Smart_Object" data-name="Vector Smart Object" width="54" height="56" fill="url(#pattern)"/>
+</svg>

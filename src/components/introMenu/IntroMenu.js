@@ -156,9 +156,8 @@ const IntroMenu = () => {
             ref={(el) => (disMap = el)}
           ></feDisplacementMap>
         </filter>
-        []
       </svg>
-      <div className='intro'>
+      <div className='intro pos'>
         <div className='intro-container'>
           <div className='intro-container-logo'>
             <img

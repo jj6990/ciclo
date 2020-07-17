@@ -1,17 +1,21 @@
-import React, { Fragment, useLayoutEffect, useState } from 'react';
+import React, { Fragment, useLayoutEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { TimelineMax, Power4 } from 'gsap/all';
 import utopiaLogo from '../../images/utopia-logo.svg';
 import dropLogoBlack from '../../images/drop-logo-black.svg';
+/*
 import dropLogoBlue from '../../images/drop-logo-blue.svg';
 import dropLogoRed from '../../images/drop-logo-red.svg';
 import dropLogoGreen from '../../images/drop-logo-green.svg';
+*/
 
 gsap.registerPlugin(TimelineMax);
 
 const Header = () => {
   const menuTl = new TimelineMax({ paused: false, reversed: true });
+
+  const responsiveNav = useRef();
 
   const useWindowWidth = () => {
     const [width, setWidth] = useState([0]);
@@ -47,7 +51,9 @@ const Header = () => {
   };
 
   const togglerMenu = () => {
-    menuTl.reversed() ? menuTl.play() : menuTl.reverse(-1);
+    if (responsiveNav.current) {
+      menuTl.reversed() ? menuTl.play() : menuTl.reverse(-1);
+    }
   };
 
   return (
@@ -73,6 +79,7 @@ const Header = () => {
               className={
                 newWidth < 1200 ? 'responsive-nav' : 'nav-menu-container'
               }
+              ref={responsiveNav}
             >
               <ul className='responsive-nav-list nav-menu-container-list'>
                 <li className='item'>

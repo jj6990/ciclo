@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Location } from '@reach/router';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import '../app.css';

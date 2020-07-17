@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/juanterneus/Desktop/ciclo/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/drop-logo.svg","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"dceb58c79e27423f913ac16b6a4a9043"},
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/drop-logo.svg","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":null},
     },{
       plugin: require('/Users/juanterneus/Desktop/ciclo/node_modules/gatsby-plugin-fontawesome-css/gatsby-ssr'),
       options: {"plugins":[]},

@@ -1,0 +1,131 @@
+.main-container {
+  &-inner {
+    .hero-container {
+      &-inner {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .news-container {
+      box-shadow: $shadow;
+      background-color: $bcolor;
+      border-radius: 5px;
+      padding: 70px 50px;
+      position: relative;
+      top: -250px;
+      &-inner {
+        &-header {
+          .title-section-container {
+            &-inner {
+              .title {
+                @include font($font: $fontTitle, $textPos: $le, $color: $dark);
+                line-height: 100%;
+                font-weight: 700;
+              }
+            }
+          }
+          .line-container {
+            &-inner {
+              background-color: $dark;
+              width: 100%;
+              height: 5px;
+              border-radius: 2px;
+            }
+          }
+        }
+
+        &-body {
+          margin: 3rem;
+          .results-container {
+            &-inner {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-gap: 2rem;
+
+              .card {
+                display: grid;
+                grid-template-columns: 1fr;
+                box-shadow: $shadow;
+                background-color: $bcolor;
+                border-radius: 5px;
+                padding: 70px 50px 0px 50px;
+
+                &-inner {
+                  .title {
+                    &-inner {
+                      &-text {
+                        @include font(
+                          $font: $fontT2,
+                          $textPos: $le,
+                          $color: $dark
+                        );
+                      }
+                    }
+                  }
+                  .image {
+                    width: 300px;
+                    &-inner {
+                      img {
+                        width: 100%;
+                        background-size: contain;
+                      }
+                    }
+                  }
+                  .description {
+                    margin-top: 20px;
+                    &-inner {
+                      &-text {
+                        @include font(
+                          $font: $fontNav,
+                          $textPos: $le,
+                          $color: $dark
+                        );
+                      }
+                      &-author {
+                        margin-top: 10px;
+                        @include font(
+                          $font: $fontNav,
+                          $textPos: $le,
+                          $color: $dark
+                        );
+                        font-weight: bold;
+                      }
+                    }
+                  }
+                  .footer-card {
+                    margin-top: 20px;
+                    &-inner {
+                      display: grid;
+                      grid-template-columns: 3fr 1fr;
+                      align-items: center;
+                      &-button {
+                        box-shadow: $shadow;
+                        background-color: $bcolor;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border-radius: 5px;
+                        width: 6rem;
+                        justify-content: center;
+                        align-items: center;
+                        display: grid;
+                      }
+                      &-text {
+                        @include font(
+                          $font: $fontNav,
+                          $textPos: $le,
+                          $color: $dark
+                        );
+                        font-weight: bold;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

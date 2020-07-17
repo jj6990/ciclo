@@ -1,8 +1,4 @@
-body {
-  font-size: 62.5%; // 1 rem = 10px /// 10px/16px = 62.5%
-  max-width: 1600px;
-  padding: 0 10px;
-  background-color: $bcolor;
+.pos {
   display: grid;
   align-content: center;
   margin: auto;
