@@ -80,7 +80,7 @@
           position: absolute;
           width: 100%;
           &-item {
-            @include font($font: $fontH, $textPos: $cen, $color: $dark);
+            @include font($font: $fontIntro, $textPos: $cen, $color: $dark);
 
             .link {
               position: absolute;
@@ -112,7 +112,7 @@
     &-description {
       margin: 2rem;
       &-text {
-        @include font($font: $fontH1, $textPos: $cen, $color: $white);
+        @include font($font: $fontIntroDesc, $textPos: $cen, $color: $white);
       }
     }
   }

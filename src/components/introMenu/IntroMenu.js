@@ -76,28 +76,28 @@ const IntroMenu = () => {
       .to(blog, 0.5, {
         transformOrigin: 'center center',
         duration: 0.5,
-        y: -70,
+        y: 70,
         opacity: 1,
         ease: Power4.easeOut,
       })
       .to(ec, 0.5, {
         transformOrigin: 'center center',
         duration: 0.5,
-        x: 70,
+        x: -70,
         opacity: 1,
         ease: Power4.easeOut,
       })
       .to(pr, 0.5, {
         transformOrigin: 'center center',
         duration: 0.5,
-        y: 70,
+        x: 70,
         opacity: 1,
         ease: Power4.easeOut,
       })
       .to(bl, 0.5, {
         transformOrigin: 'center center',
         duration: 0.5,
-        x: -70,
+        y: -70,
         opacity: 1,
         ease: Power4.easeOut,
       });
@@ -216,19 +216,19 @@ const IntroMenu = () => {
                 <li className='menu-container-list-item'>
                   <Link
                     className='link'
-                    to='/Principios'
-                    ref={(el) => (pr = el)}
+                    to='/BloquesDeCambio'
+                    ref={(el) => (bl = el)}
                   >
-                    3 Principios
+                    Bloques de cambio
                   </Link>
                 </li>
                 <li className='menu-container-list-item'>
                   <Link
                     className='link'
-                    to='/BloquesDeCambio'
-                    ref={(el) => (bl = el)}
+                    to='/Principios'
+                    ref={(el) => (pr = el)}
                   >
-                    Bloques de Cambio
+                    3 Principios
                   </Link>
                 </li>
               </ul>

@@ -11,17 +11,16 @@ const BlogNews = () => {
     loading: false,
   });
 
-  const { query, results } = search;
+  const { query, results, loading } = search;
   const keyRef = useRef();
 
   useEffect(() => {
     $('.search-input').focus();
     setSearch({ ...search, loading: true });
-    const searchUrl = `https://newsapi.org/v2/everything?language=en&pageSize=18&sortBy=publishedAt&q=circular-economy&apiKey=eabfb47b41144112b879e64d5490b68f`;
+    const searchUrl = `https://api.breakingapi.com/news?q=circular-economy&type=headlines&locale=en-US&output=json&page_size=18&api_key=5D34CCF01980485CA0AB1F4F845E14B6`;
     axios
       .get(searchUrl)
       .then((res) => {
-        console.log(res.data.articles);
         setSearch({
           query: query,
           results: res.data.articles,
@@ -57,9 +56,6 @@ const BlogNews = () => {
     }
   };
 */
-  const onDeleteBtn = () => {
-    setSearch({ ...search, query: '', results: [] });
-  };
 
   return (
     <div>
@@ -67,7 +63,7 @@ const BlogNews = () => {
         <div className='main-container-inner'>
           <div className='hero-container'>
             <div className='hero-container-inner'>
-              <img src={HeroBlog} alt='hero-blog-img' />
+              <img src={HeroBlog} alt='' />
             </div>
           </div>
           <div className='news-container'>
@@ -106,7 +102,11 @@ const BlogNews = () => {
                 </div>
               </div>
               <div className='news-container-inner-body'>
-                <SearchList results={results} keyRef={keyRef} />
+                {loading === true ? (
+                  <div className='loading'></div>
+                ) : (
+                  <SearchList results={results} keyRef={keyRef} />
+                )}
               </div>
             </div>
           </div>

@@ -37,11 +37,20 @@
 
         &-body {
           margin: 3rem;
+          .loading {
+            background-image: url('../images/loader.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+
+            height: 200px;
+            width: 100%;
+          }
           .results-container {
             &-inner {
               display: grid;
               grid-template-columns: repeat(3, 1fr);
               grid-gap: 2rem;
+              justify-items: center;
 
               .card {
                 display: grid;
@@ -49,7 +58,7 @@
                 box-shadow: $shadow;
                 background-color: $bcolor;
                 border-radius: 5px;
-                padding: 70px 50px 0px 50px;
+                padding: 70px 50px 40px 50px;
 
                 &-inner {
                   .title {
@@ -69,6 +78,8 @@
                       img {
                         width: 100%;
                         background-size: contain;
+                        max-height: 200px;
+                        min-height: 180px;
                       }
                     }
                   }
@@ -120,6 +131,53 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1460px) {
+  .main-container {
+    &-inner {
+      .news-container {
+        top: -150px;
+        &-inner {
+          &-body {
+            .results-container {
+              &-inner {
+                grid-template-columns: repeat(2, 1fr);
+                .card {
+                  padding: 50px;
+                  justify-items: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    &-inner {
+      .news-container {
+        top: -150px;
+        &-inner {
+          &-body {
+            .results-container {
+              &-inner {
+                grid-template-columns: 1fr;
+                .card {
+                  padding: 50px;
+                  justify-items: center;
+                  width: 70%;
                 }
               }
             }

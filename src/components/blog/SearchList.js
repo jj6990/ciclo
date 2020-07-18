@@ -6,32 +6,32 @@ const SearchList = ({ results, keyRef }) => {
     <div className='results-container' ref={keyRef}>
       <div className='results-container-inner'>
         {results.map((result, i) => {
-          const { title, author, description, url, urlToImage } = result;
+          const { title, snippet, link, image_links } = result;
+
           return (
             <div className='card' key={i}>
               <div className='card-inner'>
                 <div className='title'>
                   <div className='title-inner'>
                     <h3 className='title-inner-text'>
-                      <a href={url}>{title}</a>
+                      <a href={link}>{title}</a>
                     </h3>
                   </div>
                 </div>
                 <div className='image'>
                   <div className='image-inner'>
-                    <a href={url}>
+                    <a href={link}>
                       <img
-                        src={urlToImage}
+                        src={image_links}
                         className='image-inner-img'
-                        alt='news-img'
+                        alt=''
                       />
                     </a>
                   </div>
                 </div>
                 <div className='description'>
                   <div className='description-inner'>
-                    <p className='description-inner-text'>{description}</p>
-                    <p className='description-inner-author'>Por: {author}</p>
+                    <p className='description-inner-text'>{snippet}</p>
                   </div>
                 </div>
                 <div className='footer-card'>
@@ -39,12 +39,12 @@ const SearchList = ({ results, keyRef }) => {
                     <div className='footer-card-inner-text'>
                       <p>
                         {' '}
-                        <a href={url}>Leer más...</a>
+                        <a href={link}>Leer más...</a>
                       </p>
                     </div>
                     <div className='footer-card-inner-button'>
-                      <a href={url}>
-                        <img src={ArrowIcon} />
+                      <a href={link}>
+                        <img src={ArrowIcon} alt='' />
                       </a>
                     </div>
                   </div>

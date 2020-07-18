@@ -66,7 +66,7 @@ const Header = () => {
                 <Link className='nav-logo-inner-link' to='/'>
                   <img
                     className='nav-logo-inner-link-img'
-                    atl='UtopíaLogo'
+                    alt=''
                     src={utopiaLogo}
                   />
                 </Link>
@@ -108,7 +108,7 @@ const Header = () => {
             <div className='nav-menu-button' onClick={navHandler}>
               <div className='nav-menu-button-dropLogo'>
                 <img
-                  alt='utopiaDropLogo'
+                  alt='utopia DropLogo'
                   className='nav-menu-button-dropLogo-img'
                   src={dropLogoBlack}
                 />

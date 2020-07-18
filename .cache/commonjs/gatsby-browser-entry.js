@@ -23,6 +23,10 @@ exports.replace = _gatsbyLink.replace;
 exports.navigateTo = _gatsbyLink.navigateTo;
 exports.parsePath = _gatsbyLink.parsePath;
 
+var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
+
+exports.useScrollRestoration = _gatsbyReactRouterScroll.useScrollRestoration;
+
 var _publicPageRenderer = _interopRequireDefault(require("./public-page-renderer"));
 
 exports.PageRenderer = _publicPageRenderer.default;

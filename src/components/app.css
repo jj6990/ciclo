@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Open+Sans:wght@600&family=Teko:wght@300;400;500;600;700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -383,7 +384,7 @@ a {
   width: 100%;
 }
 .intro-container .inset-shadow .menu-container-list-item {
-  font: 0.5rem "Open Sans", sans-serif;
+  font: 7px "Montserrat Alternates", sans-serif;
   color: #111411;
   text-align: center;
 }
@@ -413,7 +414,7 @@ a {
   margin: 2rem;
 }
 .intro-container-description-text {
-  font: 1rem "Open Sans", sans-serif;
+  font: 15px "Montserrat Alternates", sans-serif;
   color: #ededed;
   text-align: center;
 }
@@ -612,10 +613,18 @@ svg {
 .main-container-inner .news-container-inner-body {
   margin: 3rem;
 }
+.main-container-inner .news-container-inner-body .loading {
+  background-image: url("../images/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+}
 .main-container-inner .news-container-inner-body .results-container-inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  justify-items: center;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card {
   display: grid;
@@ -623,7 +632,7 @@ svg {
   box-shadow: 4px 4px 14px #676767b0, -4px -4px 7px #fff;
   background-color: #ecf0f3;
   border-radius: 5px;
-  padding: 70px 50px;
+  padding: 70px 50px 40px 50px;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .title-inner-text {
   font: 1.8rem "Teko", sans-serif;
@@ -636,6 +645,8 @@ svg {
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .image-inner img {
   width: 100%;
   background-size: contain;
+  max-height: 200px;
+  min-height: 180px;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .description {
   margin-top: 20px;
@@ -646,6 +657,7 @@ svg {
   text-align: left;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .description-inner-author {
+  margin-top: 10px;
   font: 15px "Open Sans", sans-serif;
   color: #111411;
   text-align: left;
@@ -675,6 +687,32 @@ svg {
   color: #111411;
   text-align: left;
   font-weight: bold;
+}
+
+@media (max-width: 1460px) {
+  .main-container-inner .news-container {
+    top: -150px;
+  }
+  .main-container-inner .news-container-inner-body .results-container-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-container-inner .news-container-inner-body .results-container-inner .card {
+    padding: 50px;
+    justify-items: center;
+  }
+}
+@media (max-width: 1024px) {
+  .main-container-inner .news-container {
+    top: -150px;
+  }
+  .main-container-inner .news-container-inner-body .results-container-inner {
+    grid-template-columns: 1fr;
+  }
+  .main-container-inner .news-container-inner-body .results-container-inner .card {
+    padding: 50px;
+    justify-items: center;
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
