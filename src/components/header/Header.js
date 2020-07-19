@@ -1,4 +1,4 @@
-import React, { Fragment, useLayoutEffect, useState, useRef } from 'react';
+import React, { Fragment, useRef } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { TimelineMax, Power4 } from 'gsap/all';
@@ -12,26 +12,10 @@ import dropLogoGreen from '../../images/drop-logo-green.svg';
 
 gsap.registerPlugin(TimelineMax);
 
-const Header = () => {
+const Header = ({ newWidth }) => {
   const menuTl = new TimelineMax({ paused: false, reversed: true });
 
   const responsiveNav = useRef();
-
-  const useWindowWidth = () => {
-    const [width, setWidth] = useState([0]);
-    useLayoutEffect(() => {
-      function updateSize() {
-        setWidth([window.innerWidth]);
-      }
-      window.addEventListener('resize', updateSize);
-      updateSize();
-      return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return width;
-  };
-
-  const [newWidth] = useWindowWidth();
-  console.log(newWidth);
 
   const navHandler = () => {
     menuTl.to(

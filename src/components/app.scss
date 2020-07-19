@@ -8,7 +8,7 @@
 @import './sass/base';
 
 //components
-@import './footer/footer';
+
 @import './header/header';
 @import './layout/layout';
 @import './layout/introLayout';
@@ -20,3 +20,6 @@
 
 //blog components
 @import './blog/blog';
+
+//tabs components
+@import './tabs/tabs';

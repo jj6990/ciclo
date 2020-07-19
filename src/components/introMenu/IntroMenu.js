@@ -43,65 +43,69 @@ const IntroMenu = () => {
       return false;
     }
 
-    tl2
-      .to(logo, 1, { opacity: 0, duration: 1, ease: Power4.easeOut })
-      .to(drop, 1, {
-        scale: 0,
-        duration: 1,
-        ease: Power4.easeOut,
-        display: 'none',
-      })
-      .to(button, 1, {
-        scale: 3,
-        duration: 1,
-        ease: Power4.easeOut,
-      })
-      .to(button, 0.5, {
-        className: '+=no-shadow',
-        duration: 0.5,
-        ease: Power4.easeOut,
-      })
-      .to(button, 0.5, {
-        className: '+=inset-shadow',
-        duration: 0.5,
-        ease: Power4.easeOut,
-      })
-      .to(dropInner, 0.5, {
-        transformOrigin: 'center center',
-        display: 'grid',
-        opacity: 1,
-        duration: 0.5,
-        ease: Power4.easeOut,
-      })
-      .to(blog, 0.5, {
-        transformOrigin: 'center center',
-        duration: 0.5,
-        y: 70,
-        opacity: 1,
-        ease: Power4.easeOut,
-      })
-      .to(ec, 0.5, {
-        transformOrigin: 'center center',
-        duration: 0.5,
-        x: -70,
-        opacity: 1,
-        ease: Power4.easeOut,
-      })
-      .to(pr, 0.5, {
-        transformOrigin: 'center center',
-        duration: 0.5,
-        x: 70,
-        opacity: 1,
-        ease: Power4.easeOut,
-      })
-      .to(bl, 0.5, {
-        transformOrigin: 'center center',
-        duration: 0.5,
-        y: -70,
-        opacity: 1,
-        ease: Power4.easeOut,
-      });
-    tl2.play();
+    if (logo && drop) {
+      tl2
+        .to(logo, 1, { opacity: 0, duration: 1, ease: Power4.easeOut })
+        .to(drop, 1, {
+          scale: 0,
+          duration: 1,
+          ease: Power4.easeOut,
+          display: 'none',
+        })
+        .to(button, 1, {
+          scale: 3,
+          duration: 1,
+          ease: Power4.easeOut,
+        })
+        .to(button, 0.5, {
+          className: '+=no-shadow',
+          duration: 0.5,
+          ease: Power4.easeOut,
+        })
+        .to(button, 0.5, {
+          className: '+=inset-shadow',
+          duration: 0.5,
+          ease: Power4.easeOut,
+        })
+        .to(dropInner, 0.5, {
+          transformOrigin: 'center center',
+          display: 'grid',
+          opacity: 1,
+          duration: 0.5,
+          ease: Power4.easeOut,
+        })
+        .to(blog, 0.5, {
+          transformOrigin: 'center center',
+          duration: 0.5,
+          y: 70,
+          opacity: 1,
+          ease: Power4.easeOut,
+        })
+        .to(ec, 0.5, {
+          transformOrigin: 'center center',
+          duration: 0.5,
+          x: -70,
+          opacity: 1,
+          ease: Power4.easeOut,
+        })
+        .to(pr, 0.5, {
+          transformOrigin: 'center center',
+          duration: 0.5,
+          x: 70,
+          opacity: 1,
+          ease: Power4.easeOut,
+        })
+        .to(bl, 0.5, {
+          transformOrigin: 'center center',
+          duration: 0.5,
+          y: -70,
+          opacity: 1,
+          ease: Power4.easeOut,
+        });
+
+      tl2.play();
+    }
+
     console.log('play');
   };
 
@@ -132,7 +136,7 @@ const IntroMenu = () => {
     console.log('play');
   };
 
-  const handleLeave = (e) => {
+  const handleLeave = () => {
     tl3.reverse();
     console.log('on leave');
   };

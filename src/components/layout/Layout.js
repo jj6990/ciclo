@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from '../header/Header';
@@ -16,9 +16,24 @@ const Layout = ({ children }) => {
     }
   `);
 
+  const useWindowWidth = () => {
+    const [width, setWidth] = useState([0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setWidth([window.innerWidth]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return width;
+  };
+
+  const [newWidth] = useWindowWidth();
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} newWidth={newWidth} />
       <div>
         <main>{children}</main>
       </div>
