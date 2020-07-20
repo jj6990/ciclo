@@ -30,7 +30,8 @@ const BlogNews = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [results]);
+
   /*
   const onChange = (e) => {
     const query = e.target.value;

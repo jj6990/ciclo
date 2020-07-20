@@ -17,7 +17,6 @@ const EconomiaCircular = () => {
           <HeroSection HeroEc={HeroEc} />
           <div className='info-container'>
             <ContentEconomia />
-
             <Footer GreenMountain={GreenMountain} />
           </div>
         </div>
