@@ -78,7 +78,7 @@ const Header = ({ newWidth }) => {
                 </li>
                 <li className='item'>
                   <Link className='link' to='/BloquesDeCambio'>
-                    Bloques de Cambio
+                    Bloques de cambio
                   </Link>
                 </li>
                 <li className='item'>

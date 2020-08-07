@@ -1,11 +1,10 @@
 import React from 'react';
-
 import Img1 from '../../images/Economia-Circular/img1.svg';
 
 const ContentEconomia = () => {
   return (
     <div className='info-container-inner'>
-      <div className='grid-section'>
+      <div className='grid-section-economia'>
         <div className='line'>
           <div className='line-inner green'></div>
         </div>
@@ -26,7 +25,7 @@ const ContentEconomia = () => {
               impactos negativos de la economía lineal. Más bien, representa un
               cambio de sistema que construye resiliencia a largo plazo, genera
               oportunidades comerciales y económicas, y proporciona beneficios
-              ambientales y sociales (ellenmacarthurfoundation, 2016)
+              ambientales y sociales (ellenmacarthurfoundation, 2016).
             </p>
           </div>
           <div className='image-container'>
