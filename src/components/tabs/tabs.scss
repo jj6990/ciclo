@@ -19,10 +19,10 @@
         .grid-section-economia {
           display: grid;
           grid-template-columns: repeat(7, 1fr);
-          grid-template-rows: 1fr 2fr 1fr 2fr;
+          grid-template-rows: 1fr 2fr 2fr 2fr;
 
           .line {
-            grid-area: 1/1/4/1;
+            grid-area: 1/1/5/1;
             .green {
               background-color: $pColor;
               width: 5px;
@@ -32,9 +32,9 @@
           }
 
           .title-container {
-            grid-area: 1/2/2/8;
+            grid-area: 1/1/1/8;
             justify-self: center;
-            align-self: center;
+
             &-inner {
               &-text {
                 @include font(
@@ -42,13 +42,13 @@
                   $textPos: $le,
                   $color: $pColor
                 );
-                line-height: 100%;
+
                 font-weight: 700;
               }
             }
           }
           .paragraph-container {
-            grid-area: 2/3/3/8;
+            grid-area: 2/3/4/8;
             justify-self: center;
             align-self: center;
             &-inner {
@@ -67,7 +67,7 @@
           }
 
           .h-line-1 {
-            grid-area: 3/1/3/5;
+            grid-area: 6/1/3/5;
             align-self: center;
 
             &-inner {
@@ -79,7 +79,7 @@
           }
 
           .box-container {
-            grid-area: 3/4/4/8;
+            grid-area: 4/4/4/8;
             align-self: center;
             box-shadow: $shadow;
             border-radius: 10px;
@@ -112,81 +112,6 @@
                     @include font(
                       $font: $fontRead,
                       $textPos: $le,
-                      $color: $dark
-                    );
-                  }
-                }
-              }
-            }
-          }
-          .box-container2 {
-            grid-area: 3/3/4/8;
-            align-self: center;
-            box-shadow: $shadow;
-            border-radius: 10px;
-            background-color: $bcolor;
-            padding: 2rem;
-            &-inner {
-              .box-title-container {
-                &-inner {
-                  &-text {
-                    @include font(
-                      $font: $fontTitle3,
-                      $textPos: $cen,
-                      $color: $pColor
-                    );
-
-                    line-height: 55px;
-                  }
-                }
-              }
-              .box-paragraph-container {
-                &-inner {
-                  &-text {
-                    @include font(
-                      $font: $fontRead,
-                      $textPos: $cen,
-                      $color: $dark
-                    );
-                  }
-                  &-list {
-                    @include font(
-                      $font: $fontRead,
-                      $textPos: $le,
-                      $color: $dark
-                    );
-                  }
-                }
-              }
-            }
-          }
-          .box-container3 {
-            grid-area: 4/2/5/8;
-            align-self: center;
-            box-shadow: $shadow;
-            border-radius: 10px;
-            background-color: $bcolor;
-            padding: 2rem;
-            &-inner {
-              .box-title-container {
-                &-inner {
-                  &-text {
-                    @include font(
-                      $font: $fontTitle3,
-                      $textPos: $cen,
-                      $color: $pColor
-                    );
-
-                    line-height: 55px;
-                  }
-                }
-              }
-              .box-paragraph-container {
-                &-inner {
-                  &-text {
-                    @include font(
-                      $font: $fontRead,
-                      $textPos: $cen,
                       $color: $dark
                     );
                   }
@@ -196,15 +121,11 @@
           }
 
           .last-container {
-            grid-area: 4/1/4/8;
+            grid-area: 5/1/6/8;
 
             &-inner {
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 3fr;
               align-items: center;
               &-title {
-                grid-area: 1/1/2/8;
                 &-inner {
                   &-text {
                     @include font(
@@ -531,8 +452,6 @@
                 box-shadow: none;
                 border: 5px solid $tColor;
                 border-radius: 0px;
-                &-inner {
-                }
               }
             }
           }
@@ -540,10 +459,10 @@
         .grid-section-bloques {
           display: grid;
           grid-template-columns: repeat(7, 1fr);
-          grid-template-rows: 2fr 2fr 1fr 2fr 1fr 2fr;
+          grid-template-rows: repeat(7, 1fr);
 
           .line {
-            grid-area: 1/1/6/1;
+            grid-area: 1/1/7/1;
 
             .blue {
               background-color: $sColor;
@@ -633,6 +552,7 @@
             border-radius: 10px;
             background-color: $bcolor;
             padding: 2rem;
+            margin: $margin-boxes;
             &-inner {
               .box-title-container {
                 &-inner {
@@ -677,7 +597,7 @@
           .lines-container-1 {
             grid-area: 3/3/4/8;
             position: relative;
-            bottom: 190px;
+            bottom: 180px;
             height: 200px;
             padding: 2rem;
             align-self: center;
@@ -699,10 +619,11 @@
               .line-title {
                 width: 90%;
                 @include font(
-                  $font: $fontTitle5,
+                  $font: $fontTitle4,
                   $textPos: $le,
                   $color: $sColor
                 );
+                line-height: 26px;
               }
             }
           }
@@ -713,6 +634,7 @@
             border-radius: 10px;
             background-color: $bcolor;
             padding: 2rem;
+            margin: $margin-boxes;
             &-inner {
               .box-title-container {
                 &-inner {
@@ -754,6 +676,7 @@
             border-radius: 10px;
             background-color: $bcolor;
             padding: 2rem;
+            margin: $margin-boxes;
             &-inner {
               .box-title-container {
                 &-inner {
@@ -790,71 +713,35 @@
             }
           }
           .lines-container-2 {
-            grid-area: 4/1/4/2;
-            height: 100%;
-            padding: 2rem;
+            grid-area: 7/3/8/8;
+            position: relative;
+            bottom: 180px;
+            height: 200px;
+
+            align-self: center;
             .line-1-v {
               @extend .vertical-line;
+              background-color: $sColor !important;
             }
-            .horizontal-line-container1 {
+            .horizontal-line-container {
               display: flex;
               align-items: center;
-              width: 33.3%;
-              top: -48px;
+              width: 100%;
+              top: -15px;
               position: relative;
               .line-2-h {
                 @extend .horizontal-line;
+                background-color: $sColor !important;
+                width: 10% !important;
               }
               .line-title {
+                width: 90%;
                 @include font(
-                  $font: $fontTitle3,
+                  $font: $fontTitle4,
                   $textPos: $le,
-                  $color: $pColor
+                  $color: $sColor
                 );
-              }
-            }
-
-            .line-3-v {
-              @extend .vertical-line;
-            }
-            .horizontal-line-container2 {
-              display: flex;
-              align-items: center;
-              width: 66.6%;
-              top: -48px;
-              position: relative;
-
-              .line-4-h {
-                @extend .horizontal-line;
-              }
-              .line-title {
-                @include font(
-                  $font: $fontTitle3,
-                  $textPos: $cen,
-                  $color: $pColor
-                );
-              }
-            }
-
-            .line-5-v {
-              @extend .vertical-line;
-            }
-            .horizontal-line-container3 {
-              display: flex;
-              align-items: center;
-              width: 99.9%;
-              top: -48px;
-              position: relative;
-
-              .line-6-h {
-                @extend .horizontal-line;
-              }
-              .line-title {
-                @include font(
-                  $font: $fontTitle3,
-                  $textPos: $ri,
-                  $color: $pColor
-                );
+                line-height: 26px;
               }
             }
           }
@@ -906,31 +793,28 @@
     .footer-container {
       &-inner {
         display: grid;
-        grid-template-columns: 1fr 1fr 3fr;
-        grid-template-rows: 1fr 1fr 2fr;
+
         .image-container {
-          grid-area: 2/2/4/4;
+          grid-area: 1/1/4/4;
           height: 444px;
-          clip-path: inset(0px -70px 0px 0px);
+          clip-path: inset(0px -70px 1px 0px);
           border-radius: 5px;
 
           &-inner {
-            position: absolute;
-            width: 100%;
             .footer-green-mountain {
-              width: 100%;
               position: relative;
               border-radius: 5px;
+              width: 90vw;
             }
             .footer-blue-mountain {
-              width: 100%;
               position: relative;
               border-radius: 5px;
+              width: 90vw;
             }
             .footer-red-mountain {
-              width: 100%;
               position: relative;
               border-radius: 5px;
+              width: 90vw;
             }
           }
         }
@@ -938,12 +822,13 @@
           grid-area: 2/2/3/3;
           justify-content: center;
           display: grid;
+          z-index: 1;
 
           &-dropLogo {
             z-index: 2;
             background: $bcolor;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             display: grid;
             justify-content: center;
             align-items: center;
@@ -958,11 +843,21 @@
           }
         }
         .footer-nav {
-          grid-area: 3/2/4/3;
+          grid-area: 2/2/3/3;
           justify-self: center;
+          align-self: center;
           z-index: 1;
           &-list {
             @include font($font: $fontNav, $textPos: $cen, $color: $dark);
+            box-shadow: $shadow;
+            border-radius: 10px;
+            background-color: $bcolor;
+            padding: 30px;
+            display: none;
+            opacity: 0;
+            .item {
+              margin: 10px;
+            }
           }
         }
       }
@@ -983,22 +878,29 @@
   border-radius: 2px;
 }
 
-@media (max-width: 1460px) {
-  .main-container {
-    &-inner {
-      .info-container {
-        top: -150px;
-      }
-    }
-  }
+.inset-shadow {
+  background: $bcolor;
+  width: 150px;
+  height: 150px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  border: none;
+  animation: inset 0.5s cubic-bezier(0.61, -0.18, 0.43, 1.03) forwards;
 }
-
-@media (max-width: 840px) {
-  .main-container {
-    &-inner {
-      .info-container {
-        top: -50px;
-      }
-    }
-  }
+.no-shadow {
+  background: $bcolor;
+  width: 150px;
+  height: 150px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: none;
+  cursor: pointer;
+  border: none;
+  animation: no-shadow 0.5s cubic-bezier(0.61, -0.18, 0.43, 1.03) forwards;
 }

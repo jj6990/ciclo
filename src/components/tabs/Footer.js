@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
 import { TimelineMax, Power4 } from 'gsap/all';
@@ -7,11 +7,57 @@ import dropLogoBlack from '../../images/drop-logo-black.svg';
 gsap.registerPlugin(TimelineMax);
 
 const Footer = ({ GreenMountain, BlueMountain, RedMountain }) => {
+  let footNav = useRef(null);
+  let navList = useRef(null);
+  let imgCont = useRef(null);
+
+  const tl = new TimelineMax({ paused: false, reversed: true });
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (footNav && navList && imgCont) {
+      tl.to(footNav, 1, {
+        scale: 1.5,
+        duration: 1,
+        ease: Power4.easeOut,
+      })
+        .to(footNav, {
+          className: '+=no-shadow',
+          duration: 1,
+          ease: Power4.easeOut,
+        })
+        .to(footNav, {
+          className: '+=inset-shadow',
+          duration: 1,
+          yPercent: -10,
+          ease: Power4.easeOut,
+        })
+        .to(navList, {
+          duration: 1,
+          ease: Power4.easeOut,
+          display: 'block',
+          opacity: 1,
+          yPercent: 70,
+          transformOrigin: 'center center',
+        });
+      togglerFooter();
+    }
+  };
+  const togglerFooter = () => {
+    if (footNav) {
+      tl.reversed() ? tl.play() : tl.reverse();
+    }
+  };
+
   return (
     <div className='footer-container'>
       <div className='footer-container-inner'>
         <div className='nav-menu-button'>
-          <div className='nav-menu-button-dropLogo'>
+          <div
+            className='nav-menu-button-dropLogo'
+            onClick={handleClick}
+            ref={(el) => (footNav = el)}
+          >
             <img
               alt='utopia DropLogo'
               className='nav-menu-button-dropLogo-img'
@@ -20,7 +66,7 @@ const Footer = ({ GreenMountain, BlueMountain, RedMountain }) => {
           </div>
         </div>
         <div className='footer-nav'>
-          <ul className='footer-nav-list'>
+          <ul className='footer-nav-list' ref={(el) => (navList = el)}>
             <li className='item'>
               <Link className='link' to='/EconomiaCircular'>
                 Economía Circular
@@ -43,7 +89,7 @@ const Footer = ({ GreenMountain, BlueMountain, RedMountain }) => {
             </li>
           </ul>
         </div>
-        <div className='image-container'>
+        <div className='image-container' ref={(el) => (imgCont = el)}>
           <div className='image-container-inner'>
             <img className='footer-green-mountain' src={GreenMountain} />
             <img className='footer-blue-mountain' src={BlueMountain} />

@@ -1,4 +1,8 @@
 import React from 'react';
+import { gsap } from 'gsap';
+import { TimelineMax, Power4, ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(TimelineMax, Power4, ScrollTrigger);
 
 const ContentBloques = () => {
   return (
