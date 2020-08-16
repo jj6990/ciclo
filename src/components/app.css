@@ -558,6 +558,10 @@ a {
     width: 92vw;
   }
 }
+.intro {
+  position: relative;
+  top: 10vh;
+}
 .intro-container {
   display: grid;
   width: 100%;
@@ -580,6 +584,7 @@ a {
   box-shadow: 12px 12px 18px #898989b0, -12px -12px 27px #fff;
   cursor: pointer;
   border: none;
+  z-index: 2;
 }
 .intro-container-dropLogo-img {
   filter: url(#noise);
@@ -602,6 +607,7 @@ a {
   border: none;
   position: relative;
   opacity: 0;
+  z-index: 2;
 }
 .intro-container-dropLogo-inner-img {
   transform: scale(0.1);
@@ -633,6 +639,7 @@ a {
   cursor: pointer;
   border: none;
   animation: inset 0.5s cubic-bezier(0.61, -0.18, 0.43, 1.03) forwards;
+  z-index: 2;
 }
 .intro-container .inset-shadow .menu-container {
   position: absolute;
@@ -675,7 +682,7 @@ a {
 }
 .intro-container-description-text {
   font: 15px "Montserrat Alternates", sans-serif;
-  color: #ededed;
+  color: #111411;
   text-align: center;
 }
 
@@ -697,9 +704,9 @@ svg {
   position: absolute;
 }
 .composition-container-red-mountain {
-  position: absolute;
+  position: relative;
   width: 100vw;
-  top: 50vh;
+  height: 100vh;
   z-index: -1;
   filter: url(#noise);
 }
