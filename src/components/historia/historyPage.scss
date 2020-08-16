@@ -47,7 +47,7 @@
         opacity: 0;
         &-inner {
           display: grid;
-          grid-template-columns: 7fr 3fr;
+          grid-template-columns: 1fr;
           padding: 3vw;
           width: 80vw;
           max-width: 1600px;
@@ -116,9 +116,15 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 320px) {
   .main-container {
     &-inner {
+      .slider-controls {
+        position: absolute;
+        z-index: 10;
+        top: 460px;
+        left: 8px;
+      }
       .slider-container {
         &-section {
           opacity: 0;
@@ -133,16 +139,108 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (min-width: 465px) {
   .main-container {
     &-inner {
-      .slider-container {
-        &-section {
-          opacity: 0;
+      .slider-controls {
+        top: 533px;
+        left: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 575px) {
+  .main-container {
+    &-inner {
+      .slider-controls {
+        top: 599px;
+        left: 16px;
+      }
+    }
+  }
+}
+@media (min-width: 670px) {
+  .main-container {
+    &-inner {
+      .slider-controls {
+        top: 665px;
+        left: 16px;
+      }
+    }
+  }
+}
+@media (min-width: 750px) {
+  .main-container {
+    &-inner {
+      .slider-controls {
+        top: 700px;
+        left: 16px;
+      }
+    }
+  }
+}
+@media (min-width: 850px) {
+  .main-container {
+    &-inner {
+      .slider-controls {
+        top: 765px;
+        left: 26px;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .main-container {
+    &-inner {
+      .slider-controls {
+        top: 805px;
+        left: 27px;
+      }
+      .slider-container-section-inner {
+        .text-container {
           &-inner {
-            grid-template-columns: 1fr;
-            padding: 3vw;
-            width: 92vw;
+            &-title {
+              img {
+                width: 60%;
+                margin: auto;
+                display: flex;
+              }
+            }
+            &-text {
+              display: flex;
+              margin: auto;
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .main-container {
+    &-inner {
+      .slider-controls {
+        top: 35vh;
+        left: 27px;
+      }
+      .slider-container-section-inner {
+        grid-template-columns: 7fr 3fr;
+        .text-container {
+          &-inner {
+            &-title {
+              img {
+                width: 100%;
+                margin: auto;
+                display: flex;
+              }
+            }
+            &-text {
+              display: flex;
+              margin: auto;
+              width: 100%;
+            }
           }
         }
       }

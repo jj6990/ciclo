@@ -17,10 +17,11 @@ const BlogNews = () => {
   useEffect(() => {
     $('.search-input').focus();
     setSearch({ ...search, loading: true });
-    const searchUrl = `https://api.breakingapi.com/news?q=circular-economy&type=headlines&locale=en-US&output=json&page_size=18&api_key=5D34CCF01980485CA0AB1F4F845E14B6`;
+    const searchUrl = `https://api.breakingapi.com/news?q=circular+economy&type=headlines&locale=en-US&output=json&page=1&page_size=20&api_key=5D34CCF01980485CA0AB1F4F845E14B6`;
     axios
       .get(searchUrl)
       .then((res) => {
+        console.log(res);
         setSearch({
           query: query,
           results: res.data.articles,
