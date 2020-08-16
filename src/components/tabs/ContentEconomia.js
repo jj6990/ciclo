@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Img1 from '../../images/Economia-Circular/img1.svg';
 
 const ContentEconomia = () => {
   return (
-    <div className='info-container-inner'>
-      <div className='grid-section-economia'>
-        <div className='line'>
-          <div className='line-inner green'></div>
-        </div>
-        <div className='title-container'>
-          <div className='title-container-inner'>
-            <h1 className='title-container-inner-text'>Economía Circular</h1>
+    <Fragment>
+      <div className='info-container-inner'>
+        <div className='master-line'></div>
+        <div className='section-1-ec row1-ec'>
+          <div className='title-container'>
+            <h1>Economía Circular</h1>
           </div>
-        </div>
-        <div className='paragraph-container'>
-          <div className='paragraph-container-inner'>
-            <p className='paragraph-container-inner-text'>
+          <div className='space'></div>
+          <div className='description-container'>
+            <p>
               Es la actividad económica que construye y reconstruye la salud
               general del sistema. El concepto reconoce la importancia de la
               economía que necesita trabajar de manera efectiva a todas las
@@ -29,89 +26,52 @@ const ContentEconomia = () => {
             </p>
           </div>
           <div className='image-container'>
-            <div className='image-container-inner'>
-              <img src={Img1} className='image-container-inner-img' />
-            </div>
+            <img src={Img1} />
           </div>
         </div>
-        <div className='h-line-1'>
-          <div className='h-line-1-inner green'></div>
-        </div>
-        <div className='box-container'>
-          <div className='box-container-inner'>
-            <div className='box-title-container'>
-              <div className='box-title-container-inner'>
-                <h3 className='box-title-container-inner-text'>
-                  El sistema actual ya no funciona para empresas, personas o el
-                  medio ambiente.
-                </h3>
-              </div>
-            </div>
-            <div className='box-paragraph-container'>
-              <div className='box-paragraph-container-inner'>
-                <p className='box-paragraph-container-inner-text'>
-                  Tomamos recursos del suelo para fabricar productos, que
-                  usamos, y, cuando ya no los queremos, los desechamos. Llamamos
-                  a esto una economía lineal.
-                </p>
-              </div>
-            </div>
+        <div className='horizontal-line-b-ec1'></div>
+        <div className='section-2 row2'>
+          <div className='card-1'>
+            <h3 className='title'>
+              El sistema actual ya no funciona para empresas, personas o el
+              medio ambiente.
+            </h3>
+            <p className='paragraph'>
+              Tomamos recursos del suelo para fabricar productos, que usamos, y,
+              cuando ya no los queremos, los desechamos. Llamamos a esto una
+              economía lineal.
+            </p>
           </div>
         </div>
-        <div className='last-container'>
-          <div className='last-container-inner'>
-            <div className='last-container-inner-title'>
-              <div className='last-container-inner-title-inner'>
-                <h1 className='last-container-inner-title-inner-text'>
-                  Economía Circular es una nueva forma de:
-                </h1>
-              </div>
-            </div>
-            <div className='lines-container'>
-              <div className='line-1-v'></div>
-              <div className='horizontal-line-container1'>
-                <div className='line-2-h'></div>
-                <h4 className='line-title'>Diseñar</h4>
-              </div>
+        <div className='horizontal-line-b-ec2'></div>
+        <div className='section-2 row3'>
+          <div className='card-1--no-shadow-bl'>
+            <h3 className='title'>Economía Circular es una nueva forma de:</h3>
+            <ul className='list'>
+              <li className='item'>Diseñar</li>
 
-              <div className='line-3-v'></div>
-              <div className='horizontal-line-container2'>
-                <div className='line-4-h'></div>
-                <h4 className='line-title'>Hacer</h4>
-              </div>
+              <li className='item'>Hacer</li>
 
-              <div className='line-5-v'></div>
-              <div className='horizontal-line-container3'>
-                <div className='line-6-h'></div>
-                <h4 className='line-title'>Usar</h4>
-              </div>
-            </div>
-            <div className='box-container'>
-              <div className='box-container-inner'>
-                <div className='box-title-container'>
-                  <div className='box-title-container-inner'>
-                    <h3 className='box-title-container-inner-text'>
-                      Cambiar el sistema involucra a todos y todo:
-                    </h3>
-                  </div>
-                </div>
-                <div className='box-paragraph-container'>
-                  <div className='box-paragraph-container-inner'>
-                    <p className='box-paragraph-container-inner-text'>
-                      empresas, gobiernos e individuos; nuestras ciudades,
-                      nuestros productos y nuestros trabajos. Al diseñar los
-                      desechos y la contaminación, mantener los productos y
-                      materiales en uso y regenerar los sistemas naturales,
-                      podemos reinventar todo.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <li className='item'>Usar</li>
+            </ul>
+          </div>
+        </div>
+        <div className='horizontal-line-b-ec3'></div>
+        <div className='section-2 row4'>
+          <div className='card-1'>
+            <h3 className='title'>
+              Cambiar el sistema involucra a todos y todo:
+            </h3>
+            <p className='paragraph'>
+              empresas, gobiernos e individuos; nuestras ciudades, nuestros
+              productos y nuestros trabajos. Al diseñar los desechos y la
+              contaminación, mantener los productos y materiales en uso y
+              regenerar los sistemas naturales, podemos reinventar todo.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

@@ -11,8 +11,8 @@
     }
     &-dropLogo {
       background: $bcolor;
-      width: 250px;
-      height: 250px;
+      width: 90px;
+      height: 90px;
       display: grid;
       justify-content: center;
       align-items: center;
@@ -22,6 +22,8 @@
       border: none;
       &-img {
         filter: url(#noise);
+        width: 40%;
+        margin: auto;
       }
       .menu-container {
         display: none;
@@ -61,8 +63,8 @@
     }
     .inset-shadow {
       background: $bcolor;
-      width: 250px;
-      height: 250px;
+      width: 90px;
+      height: 90px;
       display: grid;
       justify-content: center;
       align-items: center;
@@ -94,8 +96,8 @@
     }
     .no-shadow {
       background: $bcolor;
-      width: 250px;
-      height: 250px;
+      width: 90px;
+      height: 90px;
       display: grid;
       justify-content: center;
       align-items: center;

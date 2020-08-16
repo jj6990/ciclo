@@ -2,25 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Parisienne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Open+Sans:wght@600&family=Teko:wght@300;400;500;600;700&display=swap');
-//variables
-@import './sass/typography';
-@import './sass/variables';
-@import './sass/base';
 
-//components
+@import './sass/variables.scss';
+@import './sass/base.scss';
+@import './sass/responsive.scss';
+@import './sass/typography.scss';
 
-@import './header/header';
-@import './layout/layout';
-@import './layout/introLayout';
-@import './introMenu/introMenu';
-
-//history components
-
-@import './historia/historyPage';
-
-//blog components
-@import './blog/blog';
-
-//tabs components
-@import './tabs/tabs';
-@import './tabs/responsiveTabs';
+@import './blog/blog.scss';
+@import './header/header.scss';
+@import './historia/historyPage.scss';
+@import './introMenu/introMenu.scss';
+@import './tabs/contentBloques.scss';
+@import './tabs/contentEconomia.scss';
+@import './tabs/contentPrincipios.scss';
+@import './tabs/footer.scss';
+@import './tabs/tabs.scss';

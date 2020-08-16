@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/seo';
 import HeroSection from '../components/tabs/HeroSection';
-import Footer from '../components/tabs/Footer';
+import FooterEconomia from '../components/tabs/FooterEconomia';
 
 import HeroEc from '../images/Economia-Circular/hero-economia-circular.svg';
 import GreenMountain from '../images/Economia-Circular/green-mountain.svg';
@@ -17,8 +17,8 @@ const EconomiaCircular = () => {
           <HeroSection HeroEc={HeroEc} />
           <div className='info-container'>
             <ContentEconomia />
-            <Footer GreenMountain={GreenMountain} />
           </div>
+          <FooterEconomia GreenMountain={GreenMountain} />
         </div>
       </div>
     </Layout>
