@@ -200,9 +200,11 @@ a {
   padding: 70px 50px 40px 50px;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .title-inner-text {
-  font: 1.8rem "Teko", sans-serif;
-  color: #111411;
+  font-family: "Montserrat Alternates";
+  font-size: 20px;
   text-align: left;
+  color: #111411;
+  font-weight: bold;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .image {
   width: 300px;
@@ -217,9 +219,11 @@ a {
   margin-top: 20px;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .description-inner-text {
-  font: 15px "Montserrat Alternates", sans-serif;
+  font-family: "Open Sans";
+  font-size: 16px;
+  text-align: justify;
   color: #111411;
-  text-align: left;
+  font-weight: bold;
 }
 .main-container-inner .news-container-inner-body .results-container-inner .card-inner .description-inner-author {
   margin-top: 10px;

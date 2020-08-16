@@ -64,10 +64,12 @@
                   .title {
                     &-inner {
                       &-text {
-                        @include font(
-                          $font: $fontT2,
+                        @include font2(
+                          $font-family: $mont,
+                          $font-size: 20px,
                           $textPos: $le,
-                          $color: $dark
+                          $color: $dark,
+                          $font-weight: bold
                         );
                       }
                     }
@@ -87,10 +89,12 @@
                     margin-top: 20px;
                     &-inner {
                       &-text {
-                        @include font(
-                          $font: $fontNav,
-                          $textPos: $le,
-                          $color: $dark
+                        @include font2(
+                          $font-family: $open,
+                          $font-size: 16px,
+                          $textPos: $jus,
+                          $color: $dark,
+                          $font-weight: bold
                         );
                       }
                       &-author {

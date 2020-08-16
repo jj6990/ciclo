@@ -13,25 +13,31 @@ const BlogNews = () => {
 
   const { query, results, loading } = search;
   const keyRef = useRef();
+  const apiKey = '2d97e480219c4d74bd16c71e99c83729';
 
   useEffect(() => {
     $('.search-input').focus();
     setSearch({ ...search, loading: true });
-    const searchUrl = `https://api.breakingapi.com/news?q=circular+economy&type=headlines&locale=en-US&output=json&page=1&page_size=20&api_key=5D34CCF01980485CA0AB1F4F845E14B6`;
+    const searchUrl = `https://bing-search-utopia.cognitiveservices.azure.com/bing/v7.0/news/search?q=circular-economy&count=17&mkt=en-us&safeSearch=Moderate`;
     axios
-      .get(searchUrl)
+      .get(searchUrl, {
+        headers: {
+          'Ocp-Apim-Subscription-Key': `${apiKey}`,
+        },
+      })
       .then((res) => {
-        console.log(res);
+        console.log(res.data.value);
+        console.log(res.data.value[0].image.thumbnail.contentUrl);
         setSearch({
           query: query,
-          results: res.data.articles,
+          results: res.data.value,
           loading: false,
         });
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [results]);
+  }, []);
 
   /*
   const onChange = (e) => {
