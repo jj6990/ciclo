@@ -16,6 +16,10 @@ $fontTitle3: 4rem 'Teko', sans-serif;
 $fontTitle4: 2rem 'Teko', sans-serif;
 $fontTitle5: 1rem 'Teko', sans-serif;
 
+$teko: 'Teko';
+$mont: 'Montserrat Alternates';
+$open: 'Open Sans';
+
 $fontTablet: 5rem 'Teko', sans-serif;
 
 $fontT2: 1.8rem 'Teko', sans-serif;
@@ -30,4 +34,12 @@ $jus: justify;
   font: $font;
   color: $color;
   text-align: $textPos;
+}
+
+@mixin font2($font-family, $font-size, $textPos, $color, $font-weight) {
+  font-family: $font-family;
+  font-size: $font-size;
+  text-align: $textPos;
+  color: $color;
+  font-weight: $font-weight;
 }

@@ -2,7 +2,10 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+html {
+  overflow-x: hidden;
+  background-color: $bcolor;
+}
 html,
 body,
 div,
@@ -120,7 +123,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -132,4 +135,5 @@ a:visited {
 }
 a {
   color: black;
+  text-decoration: none;
 }

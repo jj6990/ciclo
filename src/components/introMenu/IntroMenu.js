@@ -8,7 +8,7 @@ import IntroImg from './IntroImg';
 
 gsap.registerPlugin(TimelineMax, Power4);
 
-const IntroMenu = () => {
+const IntroMenu = ({ newWidth }) => {
   let drop = useRef(null);
   let dropInner = useRef(null);
   let turbulence = useRef(null);
@@ -36,6 +36,7 @@ const IntroMenu = () => {
     tl.play();
   });
 
+  console.log(button);
   const handleClick = (e) => {
     if (tl2.isActive()) {
       e.preventDefault();
