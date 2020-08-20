@@ -305,7 +305,7 @@ const IntroMenu = ({ newWidth }) => {
           </div>
           <div className='intro-container-description'>
             <p className='intro-container-description-text' ref={desc}>
-              ¿Cómo seria un mundo mejor?
+              ¿Cómo sería un mundo mejor?
             </p>
           </div>
         </div>

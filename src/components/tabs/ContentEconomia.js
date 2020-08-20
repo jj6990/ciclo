@@ -63,7 +63,7 @@ const ContentEconomia = () => {
               Cambiar el sistema involucra a todos y todo:
             </h3>
             <p className='paragraph'>
-              empresas, gobiernos e individuos; nuestras ciudades, nuestros
+              Empresas, gobiernos e individuos; nuestras ciudades, nuestros
               productos y nuestros trabajos. Al diseñar los desechos y la
               contaminación, mantener los productos y materiales en uso y
               regenerar los sistemas naturales, podemos reinventar todo.

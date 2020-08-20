@@ -15,7 +15,8 @@ const ContentPrincipios = () => {
           <div className='description-container'>
             <p>
               Existen 3 principios básicos de acción dentro de la economía
-              circular para empezar a participar dentro de este modelo económico
+              circular para empezar a participar dentro de este modelo
+              económico.
             </p>
           </div>
         </div>
@@ -24,16 +25,11 @@ const ContentPrincipios = () => {
           <div className='card-1'>
             <h3 className='title'>1. Las 3R</h3>
             <ul className='list'>
-              <li className='item'>Selección de materiales</li>
-              <li className='item'>Componentes estandarizados</li>
-              <li className='item'>Productos diseñados para durar</li>
               <li className='item'>
-                Diseño para una fácil clasificación al final de una vida útil
+                Reducir el consumo de recursos y emisiones de residuos
               </li>
-              <li className='item'>
-                Diseño para posibles aplicaciones útiles de subproductos y
-                desechos
-              </li>
+              <li className='item'>Reutilización de los recursos</li>
+              <li className='item'>Reciclar los componentes</li>
             </ul>
           </div>
         </div>
@@ -67,7 +63,7 @@ const ContentPrincipios = () => {
               Los 3 niveles producen un incremento en la economía por lo que
               requieren nuevas empresas que se especialicen en procedimientos de
               salvación de recursos, empresas de producción mas limpia y
-              facilidades públicas
+              facilidades públicas.
             </p>
           </div>
         </div>

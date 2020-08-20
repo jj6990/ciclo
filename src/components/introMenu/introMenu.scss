@@ -121,7 +121,7 @@
       margin: 2rem;
 
       &-text {
-        @include font($font: $fontIntroDesc, $textPos: $cen, $color: $dark);
+        @include font($font: $fontIntroDesc, $textPos: $cen, $color: $white);
       }
     }
   }

@@ -31,19 +31,19 @@ const ContentBloques = () => {
             </p>
           </div>
           <ul className='list'>
-            <li className='item'>Selección de materiales</li>
+            <li className='item'>Selección de materiales.</li>
 
-            <li className='item'>Componentes estandarizados</li>
+            <li className='item'>Componentes estandarizados.</li>
 
-            <li className='item'>Productos diseñados para durar</li>
+            <li className='item'>Productos diseñados para durar.</li>
 
             <li className='item'>
-              Diseño para una fácil clasificación al final de una vida útil
+              Diseño para una fácil clasificación al final de una vida útil.
             </li>
 
             <li className='item'>
               Diseño para posibles aplicaciones útiles de subproductos y
-              desechos
+              desechos.
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@ const ContentBloques = () => {
               rentables y de mejor calidad, y una segmentación efectiva de los
               productos al final de su vida útil, la fuga de materiales fuera
               del sistema disminuirá, lo que respaldará la economía del diseño
-              circular
+              circular.
             </p>
           </div>
         </div>
@@ -95,18 +95,18 @@ const ContentBloques = () => {
             </p>
           </div>
           <ul className='list'>
-            <li className='item'>Colaboración de la población en general</li>
+            <li className='item'>Colaboración de la población en general.</li>
 
-            <li className='item'>Repensar incentivos</li>
+            <li className='item'>Repensar incentivos.</li>
 
             <li className='item'>
               Proporcionar un conjunto adecuado de normas ambientales
-              internacionales
+              internacionales.
             </li>
 
             <li className='item'>
               Acceso a financiamiento por para de gobierno u organizaciones
-              internacionales
+              internacionales.
             </li>
           </ul>
         </div>

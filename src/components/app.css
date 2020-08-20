@@ -313,8 +313,9 @@ a {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: 1fr;
-  width: 100%;
+  width: 95%;
   align-items: center;
+  margin: auto;
 }
 .menu-container-inner-nav .nav-logo {
   justify-content: center;
@@ -354,7 +355,7 @@ a {
   box-shadow: 12px 12px 18px #898989b0, -12px -12px 27px #fff;
   border-radius: 3px;
   padding: 1rem 0;
-  grid-area: 1/3/1/6;
+  grid-area: 1/3/1/5;
   top: -20px;
   align-content: center;
   display: grid;
@@ -373,7 +374,7 @@ a {
 .menu-container-inner-nav .nav-menu-button {
   justify-content: center;
   display: grid;
-  grid-column-start: -1;
+  grid-column-start: 4;
   grid-row-start: 1;
 }
 .menu-container-inner-nav .nav-menu-button-dropLogo {
@@ -749,7 +750,7 @@ a {
 }
 .intro-container-description-text {
   font: 15px "Montserrat Alternates", sans-serif;
-  color: #111411;
+  color: #ededed;
   text-align: center;
 }
 
@@ -1257,7 +1258,7 @@ svg {
 }
 @media (min-width: 750px) {
   .main-container-inner .info-container-bl-inner .section-1 .description-container p {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 .main-container-inner .info-container-bl-inner .section-2 {
@@ -1290,7 +1291,7 @@ svg {
 }
 @media (min-width: 750px) {
   .main-container-inner .info-container-bl-inner .section-2 .card-1 h3 {
-    font-size: 32px;
+    font-size: 48px;
   }
 }
 .main-container-inner .info-container-bl-inner .section-2 .card-1 p {
@@ -1311,12 +1312,12 @@ svg {
   }
 }
 .main-container-inner .info-container-bl-inner .section-2 .list {
-  margin-top: 10px;
+  margin-top: 33px;
   list-style: disc;
   padding: 20px;
 }
 .main-container-inner .info-container-bl-inner .section-2 .list .item {
-  font-family: "Teko";
+  font-family: "Open Sans";
   font-size: 14px;
   text-align: left;
   color: #2f52e0;
@@ -1489,7 +1490,7 @@ svg {
 }
 @media (min-width: 750px) {
   .main-container-inner .info-container-pr-inner .section-1 .description-container p {
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 .main-container-inner .info-container-pr-inner .section-2 {
@@ -1522,7 +1523,7 @@ svg {
 }
 @media (min-width: 750px) {
   .main-container-inner .info-container-pr-inner .section-2 .card-1 h3 {
-    font-size: 32px;
+    font-size: 48px;
   }
 }
 .main-container-inner .info-container-pr-inner .section-2 .card-1 p {
@@ -1595,7 +1596,7 @@ svg {
   padding: 20px;
 }
 .main-container-inner .info-container-pr-inner .section-2 .list .item {
-  font-family: "Teko";
+  font-family: "Open Sans";
   font-size: 14px;
   text-align: left;
   color: #111411;
@@ -1766,6 +1767,12 @@ svg {
 }
 .main-container-inner .info-container-inner .section-1-ec .description-container {
   grid-area: pg;
+  padding: 35px;
+}
+@media (min-width: 750px) {
+  .main-container-inner .info-container-inner .section-1-ec .description-container {
+    padding: 60px;
+  }
 }
 .main-container-inner .info-container-inner .section-1-ec .description-container p {
   font-family: "Open Sans";
@@ -1832,7 +1839,7 @@ svg {
 }
 @media (min-width: 750px) {
   .main-container-inner .info-container-inner .section-2 .card-1 h3 {
-    font-size: 32px;
+    font-size: 48px;
   }
 }
 .main-container-inner .info-container-inner .section-2 .card-1 p {
@@ -1984,6 +1991,16 @@ svg {
   padding: 30px;
   display: none;
   opacity: 0;
+}
+@media (min-width: 575px) {
+  .main-container-inner .footer-container-inner .image-container-inner .footer-nav-list {
+    font-size: 16px;
+  }
+}
+@media (min-width: 750px) {
+  .main-container-inner .footer-container-inner .image-container-inner .footer-nav-list {
+    font-size: 22px;
+  }
 }
 .main-container-inner .footer-container-inner .image-container-inner .footer-nav-list .item {
   margin: 10px;
